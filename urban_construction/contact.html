@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+  <title>Urban Construction</title>
+	<link rel="icon" href="images/l1.png"  sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="css/dlevel.css">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script>
+    $(document).ready(function(){
+    
+         $("#submit").click(function(){
+       var fname = $("#name").val();
+       if (fname == "")
+      {
+       $("#name_error").text("Enter your name ");
+        $("#name_error").show();
+         
+      return false;
+      }
+       else
+      {
+        $("#name_error").hide(1000);
+      }
+       var lname = $("#e-mail").val();
+      if (lname == "")
+      {
+      $("#e-mail_error").text("Enter your e-mail");
+      $("#e-mail_error").show(1000);
+      return false;
+      }
+       else
+      {
+        $("#e-mail_error").hide(1000);
+      }
+      
+        var phone = $("#phone").val();
+	 if (phone == "")
+	{
+	 $("#phone_error").text("Enter your mobile number");
+		$("#phone_error").show();
+		 
+	return false;
+	}
+	 else
+	{
+		$("#phone_error").hide(1000);
+	
+      }
+      
+      var Message = $("#exampleFormControlTextarea1").val(50);
+      
+      });
+       
+    });
+	   
+	   function text_valid(){
+        
+			var msg=document.getElementById('msg').value;
+			var len = msg.length;
+			        if(len > 49){
+        		       	return false;
+        		       	        }
+        
+			}
+			
+		function display_msg(){
+			var msg=document.getElementById('msg').value;
+			
+			var len = msg.length;
+			var len_conv = (len).toString();
+			var dis_msg = document.getElementById('display-msg');
+
+			dis_msg.innerHTML = len_conv + ' &#8725; ' + '50';
+			if(len === 0){
+				
+				dis_msg.innerHTML = "Message range is in between 1 - 50";
+			}
+
+
+		}
+    </script>
+</head>
+<body>
+    
+  <div class="bg-light sticky-top">
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="images/logo.jpg" width="120px" height="50px" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" style="padding-top: 20px;">
+            <li class="nav-item">
+              <a class="nav-link nav2" href="home.html">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav2" href="investment.html">INVESTMENT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav2" href="location.html">LOCATION</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav2"  href="apartment.html">APARTMENTS</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link nav1"  href="contact.html">CONTACT</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+</div>
+      <div class="container">
+          <div class="row matter no-gutters">
+              <div class="col-sm-6 curve">
+                <h2 class="text-center header1" style="color: rgb(128, 122, 115); padding-top: 60px;">SALES DEPARTMENT</h2>
+                <h2  class="text-center header1" style="color: rgb(159, 212, 78)">OF APARTMENTS</h2>
+                <h5 class="text-center padding"> Urban  construction an ISO 9001-2015 Certified Company offers HUDA / HMDA / DTCP  for sale 
+approved layout Residential and Commercial Plots with full development near Shamshabad International Airport.</h5>
+ 
+
+
+              </div>
+              <div class="col-sm-6" >
+<img src="images/be101.jpg" class="img-fluid">
+</div>
+          </div>
+      </div>
+      <div class="container" style="margin-top: 50px;">
+        <p class="text-center">QUICK CONTACT</p>
+        <h2 class="left text-center" style="color: rgb(128, 122, 115);">FILL THE FORM <span style="color: rgb(159, 212, 78)">TO CONTACT US</span></h2>
+
+      </div>
+      <div class="container">
+          <div class="row matter">
+              <div class="col-sm-4">
+<div class="add">
+    <img src="images/call.png" class="img-fluid">
+
+    <p>+91-9812345698<br>urbanconstruction@gmail.com</p>
+
+</div>
+              </div>
+            <div class="col-sm-4">
+  <div class="add">
+      <img src="images/map.png" class="img-fluid">
+      <p>Level 13, v.i.p road,near shopperstop
+        vizag, Andhra pradesh,
+        india</p>
+  </div>                
+            </div>
+            <div class="col-sm-4">
+                <div class="add">
+                    <img src="images/time.png" class="img-fluid">
+                    <p>Monday - Saturday:<br>
+                        8AM — 10PM
+
+                    </p>
+                </div>           
+            </div>
+
+          </div>
+      </div>
+      <div class="contact">
+          <p class="text-center" style="padding-top: 90px;">CONTACT FORM</p>
+<h2 class="left text-center" style="color:white;">FILL THE FORM <span style="color:black">TO CONTACT US</span></h2>
+<div class="container" style="padding-top: 20px;">
+	<form>
+  <div class="row">
+    <div class="col-sm-6">
+      
+        <div class="form-group">
+        
+          <input type="text" class="form-control" placeholder="Your name" id="name">
+          <span class="error text-danger" id="name_error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your e-mail" id="e-mail">
+          <span id="e-mail_error"  class="text-danger"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Phone Number" id="phone">
+          <span id="phone_error" class="text-danger"></span>
+        </div>
+        
+      </div>
+    
+      
+    
+    <div class="col-sm-6">
+      <div class="form-group">
+     
+        <textarea class="form-control col" id="msg" rows="3" placeholder="Message" onkeypress ="return text_valid()" onkeyup="display_msg()"></textarea>
+		  <span id="display-msg">Message range is in between 1 - 50</span>
+     
+      </div>
+      <div class="text-center"><button type="button" class="btn2" style="margin-bottom: 50px;" id="submit">Sumbit</button></div>
+    </div>
+  </div>
+	</form>
+  </div>
+</div>
+    <div class="footer">
+<div class="container" style=" margin-top: 100px;">
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="small" style="padding-left:45px;">LOCATION</p>
+      <p class="text-center">V.I.P road, near shoppers stop, vizag</p>
+
+    </div>
+    <div class="offset-md-1 col-sm-3">
+      <p class="small" style="padding-left:45px;">EMAIL</p> 
+      <p class="text-center">urbanconstruction@gmail.com</p>
+    </div>
+
+    <div class="col-sm-3">
+      <p class="small" style="padding-left:45px;">NUMBER</p> 
+      <p  style="padding-left:45px;">+91 9812345698</p>
+    </div>
+  </div>
+	</div>
+    
+ <hr>
+	<div class="container">
+    <div class="text-center">
+      <span class="brand1">URBAN</span> <span class="brand2">Construction</span>
+    </div>
+    <p class="text-center" style="padding-top: 20px;">URBAN Construction is an online Real Estate Marketplace. Users on URBAN Construction can post their</p> 
+    <p class="text-center">residential & commercial property to Buy, Sell and Rent in Indian property Market.</p>
+    <p class="text-center" style="padding-top: 20px;">© 2020 URBAN Construction venu </p>
+</div>
+</div>
+</body>
+</html>

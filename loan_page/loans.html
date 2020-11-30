@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Loans</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+  body {
+      position: relative; 
+  }
+  </style>
+	<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.backgroundColor = "white";
+	   document.getElementById("header").style.transition = "0.1s";
+	  document.getElementById("logo2").style.display = "block";
+	  document.getElementById("logo1").style.display = "none";
+  } else {
+    document.getElementById("header").style.backgroundColor = "transparent";
+	   document.getElementById("logo1").style.display = "block";
+	  document.getElementById("logo2").style.display = "none";
+	  document.getElementById("header").style.transition = "0.1s";
+  }
+}
+		
+		function text_valid(event){
+  var key_value = event.which;
+  
+  if ((key_value >= 65 && key_value <= 90) || (key_value >= 97 && key_value <= 122)) {
+    return true;
+  }
+  else{
+    return false;
+  }
+		}
+  
+
+			function num_valid(event){
+				
+  var num_value = event.which;
+  var ph_no = document.getElementById("phone").value;
+				
+  var ph_len = ph_no.length;
+  if (num_value < 48 || num_value > 57)  {
+    return false  }
+  else if(ph_len > 9){
+    return false;
+    }
+
+}
+$(document).ready(function(){
+	
+  $("#submit").click(function(){
+	  
+    var fname = $('#fname').val();
+	  var lname = $('#lname').val();
+    var email = $('#email').val();
+    var ph_number = $('#phone').val();
+  
+    if(fname == ''){
+      $('#fname').addClass('border-cls');
+      $('#fname-err-display').show();
+      return false;
+
+    }
+	 else if(lname == ''){
+      $('#lname').addClass('border-cls');
+      $('#lname-err-display').show();
+      return false;
+		 
+    }
+    else if(email == ''){
+      $('#email').addClass('border-cls');
+      $('#email-err-display').show();
+      return false;
+    }
+	 else if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)){
+			$("#email-invalid").show();
+				$("#email").addClass("border-err");
+			 return false;
+		}	
+	   else if(ph_number == ''){
+      $('#phone').addClass('border-cls');
+      $('#ph-err-display').show();
+      return false;
+    }
+  else if(!/^[6-9]{1}[0-9]{9}$/g.test(ph_number)){
+			$("#num-invalid").show();
+					$("#phone").addClass("border");
+					return false;
+		}	
+   
+     		
+		
+
+  });
+
+  $('#fname').on('keypress keydown keyup',function(){
+      $('#fname').removeClass('border-cls');
+      $('#fname-err-display').hide();
+  });
+	$('#lname').on('keypress keydown keyup',function(){
+      $('#lname').removeClass('border-cls');
+      $('#lname-err-display').hide();
+  });
+  $('#email').on('keypress keydown keyup',function(){
+      $('#email').removeClass('border-cls');
+      $('#email-err-display').hide();
+	  $('#email-invalid').hide();
+  });
+  $('#phone').on('keypress keydown keyup',function(){
+      $('#phone').removeClass('border-cls');
+      $('#ph-err-display').hide();
+	  $('#num-invalid').hide();
+  });
+  
+
+
+});
+
+</script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="img-back">
+	<div clas="container" id="header">
+		
+
+<nav class="navbar navbar-expand-sm ">  
+	 <a class="navbar-brand" href="#"><img src="assets/images/logo1.png" width="200px" height="40px" id="logo1"><img src="assets/images/logo2.jpg" width="200px" height="40px" id="logo2" style="display:none;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#section1">Start</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">How to apply</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">Benfits</a>
+    </li>
+	  <li class="nav-item">
+      <a class="nav-link" href="#section4">Our missions</a>
+    </li>
+	  <li class="nav-item">
+      <a class="nav-link" href="#section5">Apply now</a>
+    </li>
+	  <li class="nav-item">
+      <a class="nav-link" href="#section6">Contact</a>
+    </li>
+   
+  </ul>
+	</div>
+</nav>
+	
+		</div>
+
+<div class="container">
+		<h3 class="text-right info2">Quick & easy<br>
+loans for anyone</h3>
+	<div class="row">
+	<div class="col-sm-6"></div>
+		
+		<div class="col-sm-6 ">
+		<div class="box">
+			<h3 class="info1 line">Get money <span  class="b1">USD</span></h3> 
+			<div class="row">
+			<div class="col-sm-6" id="re">
+				
+				<input type="text" class="form-control"   style="margin-top:20px; margin-left:20px;" placeholder="FRIST NAME" id="fname" name="fname" onkeypress="return text_valid(event);"><span class="error_display" id="fname-err-display" style="display:none; margin-left: 30px; color:red;">
+                            Please enter your name</span>
+				<input type="text" class="form-control"   style="margin-top: 20px;  margin-left:20px; " placeholder="EMAIL" id="email" name="email"><span class="error_display" id="email-err-display" style="display:none;width:173px; margin-left: 30px; color:red;">
+                      Please enter your email</span>
+				<span id="email-invalid"  style="display:none; margin-left: 30px; color:red;">please enter correct Email</span>
+                </div>
+				
+				<div class="col-sm-6">
+				
+				<input type="text" class="form-control"  id="lname"  name="lname"  style="margin-top: 20px;" placeholder="SURNAME" onkeypress="return text_valid(event);">
+					<span class="error_display" id="lname-err-display" style="display:none;width:173px; margin-left: 30px; color:red;">
+                      Please enter your lastname</span>
+					<input type="text" class="form-control"    style="margin-top: 20px;" placeholder="PHONE NUMBER" id="phone" name="phone" onkeypress="return num_valid(event);"><span class="error_display" id="ph-err-display" style="display:none;width:173px; margin-left: 30px; color:red;">
+                      Please enter your phone number</span>
+					<span id="num-invalid" style="display:none; color:red;">please enter correct Phone number</span>
+					</div>
+				<div>
+			<span ><input type="checkbox" style="margin-top:20px; margin-left:40px;"> DO YOU HAVE PAN CARD</span>
+			<button type="button" class="btn btn-success"  style="margin: 28px 33px 40px 80px;" id="submit" type="submit">Apply now</button>
+			 </div>
+					
+				</div>
+				</div>
+				
+				
+					</div>
+			
+					
+				
+				
+		
+	</div>
+		</div> 
+ 	
+	  </div>
+	
+	</div> 
+		</div>
+
+<div id="section1" class="container" style="padding-top:70px;padding-bottom:70px">
+  <h1 class="text-center text-pro">Get your money today<br>
+            in 3 simple steps</h1>
+  <div class="container">
+	 
+	  <div class="row process">
+	       <div class="col-sm-4 text-center"><img src="images/icon1.png" class="img-fluid"><h4 class="info1">Send your credentials<br> using the form</h4>
+		  <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+		  </div>
+		   <div class="col-sm-4 text-center"><img src="images/icon2.png" class="img-fluid"><h4 class="info1">Get your credit score <br>result</h4>
+		   <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+		  </div>
+		   <div class="col-sm-4 text-center"><img src="images/icon3.png" class="img-fluid"><h4 class="info1">wait for your money to <br>arrive</h4>
+		   <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+		  </div>
+	  </div>
+	
+	<hr class="mar">
+</div>
+	
+	
+<div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+  <div class="container">
+	  <div class="row">
+		  <div class="col-sm-6"><img src="images/lady.png" class="img-fluid"></div>
+		  <div class="col-sm-5"><h2 class="info1 head-line">Simple and fast mobile application for iOS and Android</h2>
+			  <p>Convenient <span style="float: right" class="intext">30 minutes if done digitally</span></p>
+			  <hr>
+			  <p>Simple <span style="float: right" class="intext">MobileBanking App</span></p>
+			  <hr>
+			  <p>Secure <span style="float: right" class="intext"> safe transactions</span></p>
+			  <hr>
+			  <p>MobileBanking <span style="float: right" class="intext">mobile simple and convenient.</span></p>
+			  <hr>
+		  </div>
+	  </div>
+	</div>
+	<hr class="mar">
+</div>
+	</div>
+	
+<div id="section3" class="container-fluid" style="margin-top:30px;padding-bottom:70px">
+  <div class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+		<h2 class="info1 head-line">Fast loans credit card offers 5% <br>back on every purchase.</h2>
+		  <h5 class="text-center head-line">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto Beatae Vitae dicta sunt explicab emo enim unt.</h5>
+		  <div class="doc"><img src="images/doc.png"><a href="#re"> View document</a></div>
+	  </div>
+		<div class="col-sm-6"><img src="images/lady2.png" class="img-fluid">
+</div>
+</div>
+	</div>	
+	</div>
+	  <hr>
+<div id="section4" class="container-fluid" style="padding-top:20px;padding-bottom:70px">
+  <div class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+		<h3 class="info1 text-center">Our mission</h3>
+		  <p>Sed ultrices nisl velit, eu ornare est ullamcorper a. Nunc quis nibh magna. Proin risus erat, fringilla vel purus sit amet, mattis porta enim. Duis fermentum faucibus est, sed vehicula velit sodales vitae. Mauris mollis lobortis turpis, eget accumsan ante aliquam quis. Nam ullamcorper rhoncus sem vitae tempus.
+
+    Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt ut eros a, vulputate consequat odio. Vestibulum vehicula tempor nulla, sed hendrerit urna interdum in. Donec et nibh maximus, congue est eu, mattis nunc.</p>
+		</div>
+		
+		 <div class="col-sm-6">
+			 <h3 class="info1 text-center">You can trust us</h3>
+		  <p>Sed ultrices nisl velit, eu ornare est ullamcorper a. Nunc quis nibh magna. Proin risus erat, fringilla vel purus sit amet, mattis porta enim. Duis fermentum faucibus est, sed vehicula velit sodales vitae. Mauris mollis lobortis turpis, eget accumsan ante aliquam quis. Nam ullamcorper rhoncus sem vitae tempus.
+
+    Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt ut eros a, vulputate consequat odio. Vestibulum vehicula tempor nulla, sed hendrerit urna interdum in. Donec et nibh maximus, congue est eu, mattis nunc.</p>
+			 
+		</div>
+		
+		</div>
+	  <div id="carouselExampleIndicators" class="carousel slide head-line" data-ride="carousel">
+  <ol class="carousel-indicators dots">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bar"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bar"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bar"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="rounded-circle mx-auto d-block" src="images/cus1.jpg" alt="First slide">
+		<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		<p class="text-center info1">Venu gopal rao</p>
+		<br>
+    </div>
+    <div class="carousel-item">
+      <img class="rounded-circle mx-auto d-block" src="images/cus2.jpg" alt="Second slide">
+		<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		<p class="text-center info1">Cathy</p>
+		<br>
+    </div>
+    <div class="carousel-item">
+      <img class="rounded-circle mx-auto d-block" src="images/cus3.jpg" alt="Third slide">
+		<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		<p class="text-center info1">Nikki</p>
+		<br>
+    </div>
+  </div>
+  
+</div>
+	  
+	<hr>
+	  </div>
+	</div>
+
+	
+	
+<div id="section5" style="padding-top:10px;padding-bottom:70px">
+ 
+	  <div class="mission text-center ">
+		  <h1 class="info3">Quick & easy<br>
+loans for anyone</h1>
+		  <button type="button" class="btn btn1 btn-success"><a href="#re" style="color:white;">Apply Now</a></button>
+	  </div>
+	
+	
+	<hr>
+</div>
+	 <div id="section6" class="container" style="padding-top:70px;">
+		 
+ <img src="images/money-bag.png" class=" mx-auto d-block">
+		 <h2 class="info1 text-center">Fast Loans</h2>
+		 <h2 class="info1 text-center">+91-88888 55555</h2>
+		 <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu Fugiat nulla pariatur.</p>
+</div>
+	<p class="text-center">© 2020 Fast loans - All Rights Reserved.</p>
+</body>
+</html>
